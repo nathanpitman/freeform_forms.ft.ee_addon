@@ -23,7 +23,7 @@ class Np_freeform_forms_ft extends EE_Fieldtype {
 		'name'		=> NP_FFT_NAME,
 		'version'	=> NP_FFT_VERSION
 	);
-	static $composer_forms_only = TRUE;
+	public $composer_forms_only = TRUE;
 
 	// --------------------------------------------------------------------
 
@@ -65,15 +65,15 @@ class Np_freeform_forms_ft extends EE_Fieldtype {
 
 		// Build SQL query
 		$sql = "SELECT form_name AS name, form_label AS label FROM exp_freeform_forms";
-		
+
 		// Filter composer forms
-		if ($composer_forms_only) {
+		if ($this->composer_forms_only) {
 			$sql .= " WHERE composer_id != 0";
 		}
-		
+
 		// Order by
 		$sql .= " ORDER BY form_label ASC";
-		
+
 		// Get data from DB
 		$query = $this->EE->db->query($sql);
 
