@@ -52,6 +52,24 @@ class Np_freeform_forms_ft extends EE_Fieldtype {
 	// --------------------------------------------------------------------
 
 	/**
+	* Allow the Field Type to show up in a Grid.
+	*/
+	public function accepts_content_type($name)
+	{
+		switch ($name) {
+			case 'channel':
+			case 'grid':
+			case 'blocks/1':
+				return true;
+
+			default:
+				return false;
+		}
+	}
+
+	// --------------------------------------------------------------------
+
+	/**
 	* Displays the field in publish form
 	*
 	* @param	string

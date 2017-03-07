@@ -12,7 +12,7 @@
 if ( ! defined('NP_FFT_NAME'))
 {
 	define('NP_FFT_NAME',         'NP Freeform Forms');
-	define('NP_FFT_VERSION',      '1.1');
+	define('NP_FFT_VERSION',      '1.2');
 	define('NP_FFT_DOCS',         'http://github.com/nathanpitman/np_freeform_forms');
 }
 
